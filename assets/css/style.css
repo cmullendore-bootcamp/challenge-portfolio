@@ -3,6 +3,7 @@
     margin: 0px;
     border: 0px;
     box-sizing: border-box;
+    
 }
 
 body {
@@ -44,10 +45,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    list-style: none;
-    padding: 15px;
     color: white;
-    list-style-type: style;
 }
 
 header nav ul li a:hover {
@@ -91,6 +89,9 @@ section {
     margin: 10px 10px 10px 0px;
 }
 
+article:hover {
+    box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
 
 article h3 a {
     color: #000;
@@ -98,12 +99,10 @@ article h3 a {
 }
 
 article h3 a:hover {
-    color: #000;
     text-decoration: underline;
 }
 
 .section-content article:first-child {
-    width: 100%;
     font-size:150%;
 }
 
@@ -136,4 +135,25 @@ footer {
     height: 30px;
     background-image: url("../images/background.png");
     background-size: cover;
+}
+
+@media screen and (max-width: 400px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    .section-title h2 {
+        transform: unset;
+        writing-mode: unset;
+        width: unset;
+    }
+
+    .section-content {
+        flex-direction: column;
+    }
 }
